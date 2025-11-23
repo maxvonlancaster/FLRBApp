@@ -1,0 +1,41 @@
+{
+    "nlp-sentiment": {
+        "minimal-frlb": [
+            "angry medium and worried medium and sad medium and calm medium and happy medium and excited medium then neutral",
+            "excited high and happy high then high_positive",
+            "worried low and excited low then high_negative",
+            "calm high and sad high then high_negative",
+            "angry high and calm low then high_negative",
+            "calm high and worried high then positive",
+            "angry high and sad high then high_negative",
+            "sad high and sad medium then high_negative",
+            "sad low and angry low then high_positive"
+        ]
+    },
+    "nlp-political": {
+        "minimal-frlb": [
+            "economy medium and ecology medium and populism medium and social medium and religion medium and patriotism medium then neutral",
+            "religion low and economy low then high_right",
+            "economy high and social low then high_left",
+            "religion low and ecology high then high_left",
+            "patriotism low and ecology low then right",
+            "religion high and economy medium then high_right",
+            "economy low and social high then high_right",
+            "populism medium and ecology medium then neutral",
+            "ecology low and social low then high_right"
+        ]
+    },
+    "timeseries": {
+        "minimal-frlb": [
+            "lag_0 const and lag_1 const and lag_2 const and lag_3 const and lag_4 const then const",
+            "lag_0 decrease_high and lag_4 increase then increase",
+            "lag_0 increase and lag_4 const then decrease",
+            "lag_1 increase_high and lag_3 decrease then increase_high",
+            "lag_0 increase and lag_2 const then increase_high",
+            "lag_3 increase_high and lag_0 decrease then increase_high",
+            "lag_1 decrease and lag_2 const then decrease_high",
+            "lag_0 increase_high and lag_0 increase_high then decrease_high",
+            "lag_0 increase_high and lag_2 const then increase_high"
+        ]
+    }
+}
