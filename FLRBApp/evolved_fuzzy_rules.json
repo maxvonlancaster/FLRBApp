@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "fitness": 0.85,
+    "num_rules": 10,
+    "valid_rules": 10,
+    "accuracy_on_test": 0.9412868632707775,
+    "evolved_with_ga": true
+  },
+  "fuzzy_variables": {
+    "inputs": {
+      "clf_conf": {
+        "range": [
+          0,
+          100
+        ],
+        "labels": {
+          "low": [
+            0,
+            0,
+            40
+          ],
+          "med": [
+            20,
+            50,
+            80
+          ],
+          "high": [
+            60,
+            100,
+            100
+          ]
+        }
+      },
+      "vec_susp": {
+        "range": [
+          0,
+          100
+        ],
+        "labels": {
+          "low": [
+            0,
+            0,
+            40
+          ],
+          "med": [
+            20,
+            50,
+            80
+          ],
+          "high": [
+            60,
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "output": {
+      "risk": {
+        "range": [
+          0,
+          100
+        ],
+        "labels": {
+          "low": [
+            0,
+            0,
+            40
+          ],
+          "med": [
+            20,
+            50,
+            80
+          ],
+          "high": [
+            60,
+            100,
+            100
+          ]
+        }
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": 1,
+      "antecedents": {
+        "clf_conf": "med",
+        "vec_susp": "high"
+      },
+      "consequent": {
+        "risk": "med"
+      },
+      "rule_text": "IF clf_conf=med AND vec_susp=high THEN risk=med"
+    },
+    {
+      "id": 2,
+      "antecedents": {
+        "clf_conf": "low",
+        "vec_susp": "med"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=low AND vec_susp=med THEN risk=low"
+    },
+    {
+      "id": 3,
+      "antecedents": {
+        "clf_conf": "high",
+        "vec_susp": "low"
+      },
+      "consequent": {
+        "risk": "high"
+      },
+      "rule_text": "IF clf_conf=high AND vec_susp=low THEN risk=high"
+    },
+    {
+      "id": 4,
+      "antecedents": {
+        "clf_conf": "low",
+        "vec_susp": "med"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=low AND vec_susp=med THEN risk=low"
+    },
+    {
+      "id": 5,
+      "antecedents": {
+        "clf_conf": "low",
+        "vec_susp": "high"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=low AND vec_susp=high THEN risk=low"
+    },
+    {
+      "id": 6,
+      "antecedents": {
+        "clf_conf": "high",
+        "vec_susp": "low"
+      },
+      "consequent": {
+        "risk": "high"
+      },
+      "rule_text": "IF clf_conf=high AND vec_susp=low THEN risk=high"
+    },
+    {
+      "id": 7,
+      "antecedents": {
+        "clf_conf": "low",
+        "vec_susp": "low"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=low AND vec_susp=low THEN risk=low"
+    },
+    {
+      "id": 8,
+      "antecedents": {
+        "clf_conf": "med",
+        "vec_susp": "low"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=med AND vec_susp=low THEN risk=low"
+    },
+    {
+      "id": 9,
+      "antecedents": {
+        "clf_conf": "low",
+        "vec_susp": "high"
+      },
+      "consequent": {
+        "risk": "med"
+      },
+      "rule_text": "IF clf_conf=low AND vec_susp=high THEN risk=med"
+    },
+    {
+      "id": 10,
+      "antecedents": {
+        "clf_conf": "med",
+        "vec_susp": "low"
+      },
+      "consequent": {
+        "risk": "low"
+      },
+      "rule_text": "IF clf_conf=med AND vec_susp=low THEN risk=low"
+    }
+  ]
+}
